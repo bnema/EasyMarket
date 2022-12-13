@@ -5,6 +5,7 @@ import { RouterLink, RouterView } from "vue-router";
 <template>
   <header>
     <div class="wrapper">
+      <RouterLink to="/" class="titleApp">ECO EasyMarket</RouterLink>
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/market">Market</RouterLink>
@@ -18,14 +19,24 @@ import { RouterLink, RouterView } from "vue-router";
 
 <style scoped>
 header {
-  line-height: 1.5;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 0.5rem 0.5rem;
+  background-color: var(--color-background);
+  border-bottom: 1px solid var(--color-border);
 }
-
+.titleApp {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-text);
+  text-decoration: none;
+  margin-left: 0.8rem;
+}
 nav {
  /* Place the navigation at the top of the page */
-  position: fixed;
   top: 0;
-  left: 2rem;
   right: 0;
   z-index: 1000;
   padding: 0.5rem 0.5rem;
@@ -68,10 +79,10 @@ nav a:first-of-type {
 
   nav {
     text-align: left;
-    margin-left: -1rem;
+   
     font-size: 1rem;
 
-    padding: 1rem 0;
+    
     margin-top: 1rem;
   }
 }
